@@ -1,0 +1,99 @@
+:root {
+    /* COLORS */
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+/* RESET */ 
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+picture,
+img {
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+/** CARD */
+
+.advice-card {
+    background-color: var(--Dark-Grayish-Blue);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+/* CARDS CONTENT */
+
+.advice-number {
+    color: var(--Neon-Green);
+}
+
+.advice-card {
+    color: var(--Light-Cyan);
+    font-size: 1.75rem;
+}
+
+.new-advice-button {
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    bottom: -30px;
+    height: 55px;
+    aspect-ratio: 1;
+    background-color: var(--Neon-Green);
+}
+
+.new-advice-button:hover,
+.new-advice-button:active {
+    outline: none;
+    box-shadow: 0 0 100px var(--Dark-Grayish-Blue);
+    /** + new concept learned */
+    filter: brightness(180%);
+    padding: 1.1rem;
+    transition: 100ms;
+}
+
+button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/** CARD STYLES END*/

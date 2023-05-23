@@ -2,27 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
   
-  <title>Frontend Mentor | Advice generator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <title>Advice generator app</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <main>
+    <div class="advice-card">
+      <p class="advice-number" id="advice-number">Advice # 117</p>
+      <p class="advice" id="advice">"Always think twice before an important decision"</p>
 
-  Advice #<!-- Advice ID goes here -->
+      <!-- Render the right image based on the viewport -->
+      <picture>
+        <source media="(min-width: 750px)" srcset="./images/pattern-divider-desktop.svg" />
+        <img src="./images/pattern-divider-mobile.svg" alt="pattern divider">
+      </picture>
 
-  "<!-- Advice text goes here -->"
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <button class="new-advice-button" id="new-advice-button">
+        <img src="./images/icon-dice.svg" alt="dice icon">
+      </button>
+    </div>
+  </main>
+  <script src="./index.js"></script>
 </body>
 </html>
+
+<!-- Attribution -->
+<!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
