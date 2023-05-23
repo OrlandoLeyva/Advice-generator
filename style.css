@@ -97,3 +97,10 @@ button:disabled {
 }
 
 /** CARD STYLES END*/
+
+@media (max-width: 550px) {
+    .advice-card {
+        width: 90%;
+        margin: auto;
+    }
+}
